@@ -32,7 +32,9 @@
 	
 	<target name="compile" depends="clean">
 		<mkdir dir="${classes.dir}" />
-	    <javac srcdir="${src.dir}" destdir="${classes.dir}"
+		<javac nowarn="on" debug="true"
+		       srcdir="${src.dir}" destdir="${classes.dir}"
+
 			   classpathref="classpath"
 			   debug="${value.compile.debug}"
 			   optimize="${value.compile.optimize}" />
